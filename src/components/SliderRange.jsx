@@ -1,15 +1,8 @@
-import { useState } from 'react';
 import { Slider } from "@mui/material"
 
-type Props = {
-    label: string,
-    value: number,
-    setValue: React.Dispatch<React.SetStateAction<number>>
-}
+function SliderRange({ label, value, setValue }) {
 
-function SliderRange({ label, value, setValue }: Props) {
-
-    const handleSliderValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSliderValueChange = (e) => {
         setValue(e.target.value === '' ? 0 : Number(e.target.value));
     };
 

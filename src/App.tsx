@@ -55,10 +55,10 @@ function App() {
         }
     ]
     
-    const getPaymentsAmounts = (pricesList) => {
+    const getPaymentsAmounts = (pricesList: any) => {
         const amounts: Array<number> = [];
         
-        pricesList.map(item => {
+        pricesList.map((item: any) => {
             let sum = ((storageValue) * item.storagePrice) + (transferValue * item.transferPrice);
             item.valueDec ? sum = sum - (( (item.valueDec) * item.storagePrice) + (item.valueDec * item.transferPrice) ) : sum;
 
